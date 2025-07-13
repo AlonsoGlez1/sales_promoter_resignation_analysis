@@ -11,10 +11,15 @@ dependencies:
   - jupyterlab
   - matplotlib
   - notebook
+  - seaborn
   - numpy
   - pandas
   - scikit-learn
+  - xgboost
   - ruff
+  - warnings
+  - pathlib
+  - openpyxl
   - pip:
     - python-dotenv
     - -e .
