@@ -4,8 +4,6 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-# 📊 Employee Resignation Risk Prediction
-
 This project presents a complete data science workflow to **predict the probability that an employee will resign**, based on features extracted from internal company data.
 
 ---
