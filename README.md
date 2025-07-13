@@ -75,7 +75,7 @@ jupyter notebook
 ```
 
 Open the notebooks in order:  
-`1.0-age-data-exploration.ipynb` → `1.0-age-model-training.ipynb`
+`1.0-data-exploration.ipynb` → `1.0-model-training.ipynb`
 
 ---
 
