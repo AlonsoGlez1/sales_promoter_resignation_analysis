@@ -4,58 +4,140 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-Analize data to identify turnover patterns and propose strategies to reduce this resignation rate.
+# 📊 Employee Resignation Risk Prediction
 
-## Project Organization
+This project presents a complete data science workflow to **predict the probability that an employee will resign**, based on features extracted from internal company data.
+
+---
+
+## 📂 Repository Structure
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
+├── LICENSE
+├── README.md
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         sales_promoter_resignation_analysis and configuration for tools like black
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── sales_promoter_resignation_analysis   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes sales_promoter_resignation_analysis a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
+│   ├── external
+│   ├── interim
+│   ├── processed
+│   └── raw
+├── models
+└── notebooks
 ```
 
---------
+---
 
+## 🎯 Objective
+
+The objective of this project is to develop and evaluate machine learning models that can **classify whether an employee is at risk of resigning or not**. The target variable is binary:
+
+- `RESIGN_RISK = 1`: High resignation risk (majority class)
+- `RESIGN_RISK = 0`: Low resignation risk (minority class)
+
+This classification task helps companies anticipate and mitigate attrition by identifying at-risk employees in advance.
+
+---
+
+## 🧰 Tools & Technologies
+
+- Python 3.x  
+- Pandas, NumPy  
+- Seaborn, Matplotlib  
+- Scikit-learn  
+- XGBoost
+- Jupyter Notebook  
+
+---
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/sales_promoter_resignation_analysis.git
+cd sales_promoter_resignation_analysis
+```
+
+### 2. (Optional) Create and activate a virtual environment
+
+Using Conda:
+
+```bash
+conda env create -f environment.yml
+conda activate sales_promoter_resignation_analysis
+```
+
+### 4. Run the notebooks
+
+```bash
+jupyter notebook
+```
+
+Open the notebooks in order:  
+`1.0-age-data-exploration.ipynb` → `1.0-age-model-training.ipynb`
+
+---
+
+## 📊 Project Workflow
+
+1. **Exploratory Data Analysis**
+   - Distribution plots for key features
+   - Correlation analysis
+
+2. **Preprocessing**
+   - Handling missing values
+   - Feature selection and scaling
+   - Optional: Dimensionality reduction
+
+3. **Model Training**
+   - Class imbalance inspection
+   - Stratified cross-validation
+   - Models tested: Logistic Regression, Random Forest, SVM, KNN, etc.
+   - GridSearchCV for hyperparameter tuning
+
+4. **Evaluation Metrics**
+   - Accuracy, Precision, Recall, F1-score
+   - Confusion matrix
+
+---
+
+## 📈 Sample Results
+
+*(Replace these with your actual metrics)*
+
+- **Best Model:** Random Forest  
+- **Macro-F1-score:** 0.836  
+- **Macro-Precision:** 0.806  
+- **Macro-Recall:** 0.898  
+
+---
+
+## 💡 Highlights
+
+- Addressed severe class imbalance using stratified splitting and metric prioritization  
+- Compared multiple classifiers with cross-validation and grid search  
+- Produced meaningful insights from model interpretability  
+- Delivered reproducible and modular analysis pipeline  
+
+---
+
+## 📌 Future Improvements
+
+- Use SMOTE or other oversampling techniques  
+- Incorporate SHAP or LIME for model explanation  
+- Deploy using Streamlit as an internal HR dashboard  
+- Monitor model drift and retrain with new data  
+
+---
+
+## 👤 Author
+
+**Alonso González Escobedo**  
+_Data Science & Machine Learning Enthusiast_    
+
+---
+
+## ⭐️ Show Your Support
+
+If you found this project helpful, consider starring ⭐ the repository and connecting with me on [LinkedIn](https://www.linkedin.com/in/alonsoglez/).  
